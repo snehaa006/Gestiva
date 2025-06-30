@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: gestiva-maternal-compass-85
+        working-directory: gestiva-maternal-compass-85/Frontend
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -29,7 +29,7 @@ jobs:
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: gestiva-maternal-compass-85/Frontend/dist
 
   deploy:
     needs: build
