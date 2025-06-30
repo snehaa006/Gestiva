@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/gestiva/', 
+  base: '/Gestiva/', 
   server: {
     host: "localhost",
     port: 8000,
