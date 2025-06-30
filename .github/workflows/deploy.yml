@@ -25,18 +25,18 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd Frontend
+          cd gestiva-maternal-compass-85
           npm install
 
       - name: Build project
         run: |
-          cd Frontend
+          cd gestiva-maternal-compass-85
           npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: Frontend/dist
+          path: gestiva-maternal-compass-85/dist
 
   deploy:
     needs: build
