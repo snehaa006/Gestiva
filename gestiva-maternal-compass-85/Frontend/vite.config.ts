@@ -11,7 +11,7 @@ export default defineConfig(({ mode }) => ({
     port: 8000,
     proxy: {
       "/api": {
-        target: "http://localhost:5001", // Flask backend
+        target: "http://localhost:5001", 
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ""),
       },
