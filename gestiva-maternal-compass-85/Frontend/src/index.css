@@ -1,0 +1,131 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+
+@layer base {
+  :root {
+    --background: 44 25% 94%;
+    --foreground: 44 25% 15%;
+
+    --card: 44 25% 97%;
+    --card-foreground: 44 25% 15%;
+
+    --popover: 44 25% 97%;
+    --popover-foreground: 44 25% 15%;
+
+    --primary: 25 45% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 40 35% 85%;
+    --secondary-foreground: 44 25% 15%;
+
+    --muted: 40 35% 90%;
+    --muted-foreground: 44 20% 45%;
+
+    --accent: 33 65% 70%;
+    --accent-foreground: 44 25% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 40 35% 85%;
+    --input: 40 35% 85%;
+    --ring: 25 45% 60%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 44 25% 94%;
+    --sidebar-foreground: 44 25% 15%;
+    --sidebar-primary: 25 45% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 40 35% 85%;
+    --sidebar-accent-foreground: 44 25% 15%;
+    --sidebar-border: 40 35% 85%;
+    --sidebar-ring: 25 45% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url('/lovable-uploads/8d50e58a-79d3-4b5c-9071-612145003593.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200px 200px;
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  .logo-bg {
+    background-image: url('/lovable-uploads/8d50e58a-79d3-4b5c-9071-612145003593.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.1;
+  }
+}
+
+@layer components {
+  .gestiva-gradient {
+    background: linear-gradient(135deg, #DB9C60 0%, #AE794B 25%, #976841 50%, #6A452C 75%, #302217 100%);
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+
+  .animate-bounce-in {
+    animation: bounceIn 0.8s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
